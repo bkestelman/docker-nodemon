@@ -7,6 +7,7 @@ Run docker-nodemon and mount your code:
 ```
 SOURCE=example \
 TARGET=/target \
+APP=server.js \
 docker run --rm -dit --name my-nodemon --mount type=bind,source=$SOURCE,target=$TARGET nodemon
 ```
 Replace `my-nodemon` with a name for the container. 
