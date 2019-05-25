@@ -5,16 +5,8 @@ docker-nodemon runs your nodejs code with nodemon, so you don't need to restart 
 
 Run docker-nodemon and mount your code:
 ```
-(
-export SOURCE=example \
-export TARGET=/target \
-export APP=index.js \
-docker run --rm -dit --name my-nodemon --mount type=bind,source=$SOURCE,target=$TARGET nodemon
-)
+bash run.sh
 ```
-Replace `my-nodemon` with a name for the container. 
-
-Use `-p` to forward the port your node app is listening on (e.g. `-p 5000:5000`)
 
 ## What's the Problem?
 Containerizing applications with Docker is great. Containers can run anywhere and developers working on the same code don't need to worry about configuring it, since all the configuration is baked into the container. 
