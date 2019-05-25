@@ -5,7 +5,7 @@ docker-nodemon runs your nodejs code with nodemon, so you don't need to restart 
 
 Run docker-nodemon and mount your code:
 ```
-docker run --rm -dit --name my-nodemon --mount type=bind,source=path/to/code nodemon
+MOUNT_TARGET=/path/to/code/in/container docker run --rm -dit --name my-nodemon --mount type=bind,source=path/to/code/on/host,target=$MOUNT_TARGET nodemon
 ```
 Replace `my-nodemon` with a name for the container. 
 
